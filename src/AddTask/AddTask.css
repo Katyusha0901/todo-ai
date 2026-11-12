@@ -1,0 +1,14 @@
+.button-primary span {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+@media (max-width: 380px) {
+  .add-task-form .controls {
+    flex-direction: column;
+  }
+  .add-task-form button {
+    width: 100%;
+  }
+}

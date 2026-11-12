@@ -1,3 +1,4 @@
+import './DeleteAllTasks.css'
 type Props = {
   disabled: boolean
   onDeleteAll: () => void
@@ -5,7 +6,7 @@ type Props = {
 
 export default function DeleteAllTasks({ disabled, onDeleteAll }: Props) {
   return (
-    <button type="button" disabled={disabled} onClick={onDeleteAll}>
+    <button className="button-subtle button-danger delete-all" type="button" disabled={disabled} onClick={onDeleteAll}>
       Удалить все задачи
     </button>
   )

@@ -1,3 +1,4 @@
+import './Task.css'
 import { useState } from "react";
 import type { SubmitEvent } from "react";
 import type { Task } from "../types";
@@ -18,7 +19,7 @@ export default function TaskEditing({ task, onSave, onCancel }: Props) {
   }
 
   return (
-    <form className="task-form" onSubmit={handleSubmit}>
+    <form className="task-form editing-form" onSubmit={handleSubmit}>
       <label htmlFor={`edit-${task.id}`}>Текст задачи</label>
       <div className="controls">
         <input
@@ -33,7 +34,7 @@ export default function TaskEditing({ task, onSave, onCancel }: Props) {
             }
           }}
         />
-        <button type="submit" disabled={!text.trim()}>
+        <button className="button-primary" type="submit" disabled={!text.trim()}>
           Сохранить
         </button>
         <button type="button" onClick={onCancel}>

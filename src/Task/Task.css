@@ -1,0 +1,139 @@
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  transition:
+    border-color 0.16s,
+    background 0.16s;
+}
+
+.task-row:hover {
+  border-color: #bfcdbd;
+  background: #fcfdfa;
+}
+
+.task-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.task-label span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.icon-button {
+  width: 44px;
+  padding: 10px;
+}
+
+.icon-button svg {
+  flex-shrink: 0;
+}
+
+.is-completed {
+  background: #f7f9f5;
+  border-color: #e7ece4;
+}
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-color: #a0ada0;
+  color: #747e75;
+}
+
+.editing-form {
+  padding: 16px;
+  background: #f4f7f1;
+  border: 1px solid #b7c9b1;
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .task-row {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px;
+  }
+  .task-label {
+    flex-basis: 100%;
+  }
+  .actions {
+    margin-left: 25px;
+    flex-wrap: wrap;
+  }
+  .editing-form .controls {
+    flex-wrap: wrap;
+  }
+  .editing-form input {
+    flex-basis: 100%;
+  }
+  .editing-form button {
+    flex: 1;
+  }
+}
+
+.task-checkbox {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  flex: 0 0 21px;
+  width: 21px;
+  height: 21px;
+  margin: 1px 0 0;
+  border: 1.5px solid #a6b6a5;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    background 0.16s,
+    border-color 0.16s;
+}
+
+.task-checkbox::before {
+  content: "";
+  width: 9px;
+  height: 5px;
+  margin-top: -3px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+  visibility: hidden;
+}
+
+.task-checkbox:hover {
+  border-color: var(--accent);
+}
+
+.task-checkbox:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.task-checkbox:checked::before {
+  visibility: visible;
+}
+
+@media (forced-colors: active) {
+  .task-checkbox {
+    appearance: auto;
+  }
+  .task-checkbox::before {
+    display: none;
+  }
+}

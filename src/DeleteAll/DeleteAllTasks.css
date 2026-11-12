@@ -1,0 +1,11 @@
+.delete-all:disabled {
+  background: transparent;
+  border-color: transparent;
+  color: #89938b;
+}
+
+.delete-all:hover:not(:disabled) {
+  color: #943f3f;
+  background: #fbefed;
+  border-color: #efd8d3;
+}

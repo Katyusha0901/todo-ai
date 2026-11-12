@@ -1,3 +1,4 @@
+import './AddTask.css'
 import { useState } from 'react'
 import type { SubmitEvent } from 'react'
 
@@ -17,11 +18,11 @@ export default function AddTask({ onAdd }: Props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="task-form">
+    <form onSubmit={handleSubmit} className="task-form add-task-form">
       <label htmlFor="new-task">Новая задача</label>
       <div className="controls">
-        <input id="new-task" value={text} onChange={(event) => setText(event.target.value)} />
-        <button type="submit" disabled={!text.trim()}>Добавить</button>
+        <input id="new-task" placeholder="Что нужно сделать?" autoComplete="off" value={text} onChange={(event) => setText(event.target.value)} />
+        <button className="button-primary" type="submit" disabled={!text.trim()}><span aria-hidden="true">＋</span> Добавить</button>
       </div>
     </form>
   )

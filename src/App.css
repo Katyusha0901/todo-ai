@@ -1,0 +1,144 @@
+main {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 12px 0 8px;
+  font-size: clamp(32px, 5vw, 44px);
+  line-height: 1.2;
+  font-weight: 650;
+  letter-spacing: -0.045em;
+}
+
+.heading-dot {
+  color: var(--accent);
+}
+
+.page-description {
+  color: var(--muted);
+  margin: 0;
+  font-size: 15px;
+}
+
+.workspace {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px #273b2d06;
+}
+
+.list-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-top: 28px;
+  margin-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.list-heading h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.list-heading > span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.task-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 18px 0 24px;
+  padding: 0;
+}
+
+.task-list li {
+  min-width: 0;
+}
+
+.empty-state {
+  padding: 40px 12px;
+  text-align: center;
+}
+
+.empty-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 16px;
+  border: 1px solid #dce7d8;
+  border-radius: 17px;
+  color: var(--accent);
+  background: #f0f5ec;
+  font-size: 24px;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.empty-state p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.list-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.page-note {
+  margin: 24px 0 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .page-header {
+    margin-bottom: 24px;
+  }
+  .workspace {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  .empty-state {
+    padding: 32px 0;
+  }
+  .desktop-break {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .workspace {
+    padding: 16px;
+  }
+}
