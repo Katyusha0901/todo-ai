@@ -66,16 +66,20 @@
 
 @media (max-width: 640px) {
   .task-row {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 8px;
-    padding: 14px;
+    padding: 10px;
   }
   .task-label {
-    flex-basis: 100%;
+    flex: 1 1 0;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
   }
   .actions {
-    margin-left: 25px;
-    flex-wrap: wrap;
+    margin-left: 0;
+    flex-wrap: nowrap;
+    gap: 0;
   }
   .editing-form .controls {
     flex-wrap: wrap;
